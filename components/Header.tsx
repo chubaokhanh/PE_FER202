@@ -28,10 +28,12 @@ export function Header() {
               <span data-testid="user-email" className="text-sm font-medium text-muted-foreground">
                 {user.email}
               </span>
-              <Link href="/books">
-                <Button variant="ghost" data-testid="link-books">
-                  Books
-                </Button>
+              <Link
+                href="/books"
+                data-testid="link-books"
+                className="inline-flex items-center justify-center rounded-md text-sm font-medium h-9 px-3 hover:bg-accent hover:text-accent-foreground transition-colors"
+              >
+                Books
               </Link>
               <Button
                 variant="outline"
@@ -44,15 +46,19 @@ export function Header() {
             </>
           ) : (
             <>
-              <Link href="/login">
-                <Button variant="ghost" size="sm" data-testid="btn-login">
-                  Login
-                </Button>
+              <Link
+                href="/login"
+                data-testid="btn-login"
+                className="inline-flex items-center justify-center rounded-md text-sm font-medium h-9 px-3 hover:bg-accent hover:text-accent-foreground transition-colors"
+              >
+                Login
               </Link>
-              <Link href="/register">
-                <Button size="sm" data-testid="btn-register">
-                  Register
-                </Button>
+              <Link
+                href="/register"
+                data-testid="btn-register"
+                className="inline-flex items-center justify-center rounded-md text-sm font-medium h-9 px-3 bg-primary text-primary-foreground hover:bg-primary/90 transition-colors"
+              >
+                Register
               </Link>
             </>
           )}
